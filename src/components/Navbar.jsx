@@ -1,88 +1,129 @@
 import { Link } from "react-router-dom";
 
+
 function Navbar() {
   return (
     <nav className="sticky top-0 z-50">
       <div className="bg-[#FBF7F2] border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+  <div className="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
 
-          <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-[#8B3A2A] rounded-xl flex items-center justify-center text-2xl">
-              🏺
-            </div>
+    {/* Logo */}
+    <Link
+  to="/"
+  className="flex flex-col leading-none shrink-0"
+>
+  <h1 className="heading-font text-2xl sm:text-3xl lg:text-4xl text-[#8B3A2A] font-bold">
+    JHARCRAFT
+  </h1>
 
-            <div>
-              <h1 className="font-bold text-2xl text-[#8B3A2A]">
-                JHARCRAFT
-              </h1>
-
-              <p className="text-xs text-gray-500">
-                Government Marketplace
-              </p>
-            </div>
-          </Link>
-
-          <div className="hidden lg:flex items-center">
-            <input
-              type="text"
-              placeholder="Search handcrafted products..."
-              className="border border-gray-300 px-4 py-3 rounded-l-xl w-96 outline-none"
-            />
-
-            <button className="bg-[#8B3A2A] text-white px-6 py-3 rounded-r-xl">
-              🔍
-            </button>
-          </div>
-
-          <div className="flex items-center gap-3">
-
-            <Link to="/login">
-  <button className="border border-[#8B3A2A] text-[#8B3A2A] px-8 py-3 rounded-xl font-medium hover:bg-[#8B3A2A] hover:text-white transition duration-300 shadow-sm">
-    Login
-  </button>
+  <span className="text-[10px] sm:text-xs text-gray-500 tracking-wider uppercase">
+    Global Art Marketplace
+  </span>
 </Link>
 
-            <Link to="/register">
-  <button className="border border-[#8B3A2A] text-[#8B3A2A] px-8 py-3 rounded-xl font-medium hover:bg-[#8B3A2A] hover:text-white transition duration-300-md">
-    Register
-  </button>
-</Link>
+    {/* Search */}
+    <div className="flex order-3 md:order-0 w-full md:w-auto items-center flex-1 max-w-xl">
+      <input
+        type="text"
+        placeholder="Search handcrafted products..."
+        className="w-full px-5 py-3 border border-gray-300 rounded-l-full"
+      />
 
-            <Link to="/login">
-  <button className="bg-[#D4A24C] text-black px-8 py-3 rounded-xl font-medium hover:bg-[#c79234] hover:scale-105 transition duration-300 shadow-md">
-    🛒 Cart (0)
-  </button>
-</Link>
+      <button className="bg-[#8B3A2A] px-6 py-3 rounded-r-full text-white">
+        🔍
+      </button>
+    </div>
 
-          </div>
+    {/* Buttons */}
+    <div className="flex items-center gap-2">
 
-        </div>
-      </div>
+      <Link to="/login" className="hidden md:block">
+        <button className="border border-[#8B3A2A] text-[#8B3A2A] px-6 py-2 rounded-xl">
+          Login
+        </button>
+      </Link>
+
+      <Link to="/register" className="hidden md:block">
+        <button className="border border-[#8B3A2A] text-[#8B3A2A] px-6 py-2 rounded-xl">
+          Register
+        </button>
+      </Link>
+
+      <Link to="/login">
+        <button className="bg-[#D4A24C] text-black px-4 md:px-6 py-2 rounded-xl">
+          🛒 Cart (0)
+        </button>
+      </Link>
+
+    </div>
+
+  </div>
+</div>
 
       <div className="bg-[#1E1612] text-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-center gap-10 py-3">
+        <div className="max-w-7xl mx-auto">
 
-            <Link to="/" className="hover:text-[#D4A24C] transition duration-300">
-              Home
-            </Link>
+  {/* Desktop Menu */}
+  <div className="hidden md:flex justify-center gap-10 py-3 text-base">
 
-            <a href="#crafts"className="hover:text-[#D4A24C] transition duration-300">All Categories</a>
+    <a href="#top" className="hover:text-[#D4A24C] transition">
+      Home
+    </a>
 
-            <a href="#products"className="hover:text-[#D4A24C] transition duration-300">Export Collection</a>
+    <a href="#crafts" className="hover:text-[#D4A24C] transition">
+      All Categories
+    </a>
 
-            <a href="#products"className="hover:text-[#D4A24C] transition duration-300">New Arrivals</a>
+    <a href="#products" className="hover:text-[#D4A24C] transition">
+      Export Collection
+    </a>
 
-            <a href="#products"className="hover:text-[#D4A24C] transition duration-300">Great Deals</a>
+    <a href="#products" className="hover:text-[#D4A24C] transition">
+      New Arrivals
+    </a>
 
-            <a href="#artisans"className="hover:text-[#D4A24C] transition duration-300">Blogs</a>
+    <a href="#products" className="hover:text-[#D4A24C] transition">
+      Great Deals
+    </a>
 
-            <a href="#about"className="hover:text-[#D4A24C] transition duration-300">About</a>
+    <a href="#artisans" className="hover:text-[#D4A24C] transition">
+      Blogs
+    </a>
 
-            <a href="#contact"className="hover:text-[#D4A24C] transition duration-300">Contact</a>
+    <Link to="/about" className="hover:text-[#D4A24C] transition">
+      About
+    </Link>
 
-          </div>
-        </div>
+    <Link to="/contact" className="hover:text-[#D4A24C] transition">
+      Contact
+    </Link>
+
+  </div>
+
+  {/* Mobile Menu */}
+  <div className="md:hidden overflow-x-auto whitespace-nowrap py-3 px-4">
+    <div className="flex gap-6 text-sm min-w-max">
+
+      <a href="#top">Home</a>
+
+      <a href="#crafts">Categories</a>
+
+      <a href="#products">Export</a>
+
+      <a href="#products">New</a>
+
+      <a href="#products">Deals</a>
+
+      <a href="#artisans">Blogs</a>
+
+      <Link to="/about">About</Link>
+
+      <Link to="/contact">Contact</Link>
+
+    </div>
+  </div>
+
+</div>
       </div>
     </nav>
   );
