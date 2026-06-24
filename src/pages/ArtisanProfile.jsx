@@ -1,3 +1,5 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useParams, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import rameshImg from "../assets/artisans/ramesh.png";
@@ -117,16 +119,22 @@ mahesh: {
 
   if (!artisan) {
     return (
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        <div className="bg-white rounded-3xl shadow-lg p-10">
-          <p className="text-center text-xl text-[#8B3A2A]">Artisan not found.</p>
+      <>
+        <Navbar />
+
+        <div className="max-w-5xl mx-auto px-6 py-12">
+          <div className="bg-white rounded-3xl shadow-lg p-10">
+            <p className="text-center text-xl text-[#8B3A2A]">Artisan not found.</p>
+          </div>
         </div>
-      </div>
+      </>
     );
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-8">
+    <>
+      <Navbar />
+      <div className="max-w-5xl mx-auto px-6 py-8">
 
       <div className="bg-white rounded-3xl shadow-lg p-6">
 
@@ -395,7 +403,8 @@ mahesh: {
   </div>
 
 </div>
-
+<Footer />
+    </>
   );
 }
 

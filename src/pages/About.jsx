@@ -141,7 +141,7 @@ h-73
 flex
 flex-col
 items-center
-pt-8.5
+pt-
 ">
 
   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[#F8EFE5] flex items-center justify-center text-4xl">

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import { useParams, useNavigate } from "react-router-dom";
 import dokraImg from "../assets/products/dokra.png";
 import tussarImg from "../assets/products/tussar.png";
@@ -71,6 +73,8 @@ const handleAuthRedirect = () => {
   }
 
   return (
+    <>
+      <Navbar />
     <div className="max-w-6xl mx-auto px-6 py-8">
 
       <div className="grid lg:grid-cols-[380px_1fr] gap-6 items-start">
@@ -193,7 +197,10 @@ const handleAuthRedirect = () => {
     </div>
   ))}
 </div>
+
     </div>
+    <Footer />
+    </>
   );
 }   
 export default ProductDetails;
