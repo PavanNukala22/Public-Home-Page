@@ -80,7 +80,7 @@ function Contact() {
               w-full
               bg-[#8B3A2A]
               text-white
-              py-3
+              py-2
               rounded-xl
               font-semibold
               hover:bg-[#6D2D22]
